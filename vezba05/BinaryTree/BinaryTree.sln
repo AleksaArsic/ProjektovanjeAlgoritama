@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BinaryTree", "BinaryTree.pyproj", "{F4EF9BE9-5F30-4FDC-9890-8F684FF7113E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4EF9BE9-5F30-4FDC-9890-8F684FF7113E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EF9BE9-5F30-4FDC-9890-8F684FF7113E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB6B2651-DBBA-4D6C-A332-F552815DDA43}
+	EndGlobalSection
+EndGlobal
