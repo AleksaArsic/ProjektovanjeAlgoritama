@@ -11,10 +11,16 @@ def makeNewElem(l, freq, char):
 
     hNode = huffNode(None, None, None, freq, char)
 
-    for i in range(len(l)):
-        if l[i].freq >= hNode.freq:
-            l.insert(i, hNode)
-            break
+    if len(l) == 0:
+        l.append(hNode)
+    else:
+        i = 0
+        while l[i].freq < hNode.freq:
+            i += 1
+            if i == len(l):
+                break
+
+        l.insert(i, hNode)
 
 def makeHuffTree(l):
 
