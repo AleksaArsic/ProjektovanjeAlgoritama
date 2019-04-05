@@ -48,10 +48,8 @@ def inorderHuffTreeWalk(x):
     if x != None:
         path = ""
         inorderHuffTreeWalk(x.left)
-        path +="0"
         print(x.freq, x.char, x.path)
         inorderHuffTreeWalk(x.right)
-        path += "1"
 
 def getMinFreqElem(x):
     
