@@ -27,7 +27,25 @@
     <Compile Include="binaryTree.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="histogram.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="huffmanTree.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="huffmanClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nArryTree.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nArryTreeClass.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="pripremaDrugiTreci.py" />
+    <Compile Include="snippets.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
