@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>cff595ff-6c8e-43cd-b58a-c58cfd1580df</ProjectGuid>
+    <ProjectGuid>0bc9f818-ae0d-4ab6-8776-7a95d2d837b5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>pripremaDrugiTreci.py</StartupFile>
+    <StartupFile>vezba06.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>pripremaDrugiTreci</Name>
-    <RootNamespace>pripremaDrugiTreci</RootNamespace>
+    <Name>vezba06</Name>
+    <RootNamespace>vezba06</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,25 +21,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="binaryClass.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="binaryTree.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="histogram.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="huffmanTree.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="huffmanClass.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="pripremaDrugiTreci.py" />
-    <Compile Include="snippets.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="histogram.py" />
+    <Compile Include="huffmanClass.py" />
+    <Compile Include="huffmanTree.py" />
+    <Compile Include="snippets.py" />
+    <Compile Include="vezba06.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
