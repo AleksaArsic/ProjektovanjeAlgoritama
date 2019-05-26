@@ -12,9 +12,15 @@ class Vertex:
     def __init__(self, d = None, color = VertexColor.WHITE):
         self.data = d
         self.neighbours = []
-        self.distance = math.inf
+
+        # BFS parameters
         self.color = color
+        self.distance = math.inf
         self.pi = None
+
+        #DFS parameters (including colorfrom BFS parameters)
+        self.time = 0
+        self.finish = 0
 
     def addNeighbour(self, d = None):
 
@@ -35,6 +41,7 @@ class Graph:
 
     def __init__(self):
         self.graph = []
+        self.time = 0
 
     def addVertex(self, vertex):
         if isinstance(vertex, Vertex) and vertex not in self.graph:
@@ -50,12 +57,16 @@ class Graph:
 
             print("\tList of neighbours:")
             for neighbour in v.neighbours:
-                print("\t[", neighbour.data.index, "]:", neighbour.color, ", dist:", neighbour.distance)
+                print("\t[", neighbour.data.index, "]:", neighbour.color, ", dist:", neighbour.distance, ", time:", neighbour.time, ", finish: ", neighbour.finish)
 
             i += 1
 
     def BFS(self, start):
         
+        for vertex in self.graph:
+            vertex.color = VertexColor.WHITE
+            vertex.pi = None
+
         q = []
 
         if not isinstance(start, Vertex):
@@ -89,3 +100,27 @@ class Graph:
         else:
             self.printPath(s, v.pi)
             print(v.data.index)
+
+    def DFS(self):
+
+        for vertex in self.graph:
+            vertex.color = VertexColor.WHITE
+            vertex.pi = None
+
+        for vertex in self.graph:
+            if vertex.color == VertexColor.WHITE:
+                self.dfsVisit(vertex)
+
+    def dfsVisit(self, vertex):
+        self.time = self.time + 1
+        vertex.time = self.time
+        vertex.color = VertexColor.GRAY
+
+        for v in vertex.neighbours:
+            if v.color == VertexColor.WHITE:
+                v.pi = vertex
+                self.dfsVisit(v)
+
+        vertex.color = VertexColor.BLACK
+        self.time = self.time + 1
+        vertex.finish = self.time

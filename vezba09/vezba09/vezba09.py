@@ -6,7 +6,7 @@ from graphUtilities import *
 if __name__ == "__main__":
     
 
-    # Test code
+    # Driver code (initializing graph)
     index = [1, 2, 3, 4, 5]
     data = []
     vertex = []
@@ -40,6 +40,9 @@ if __name__ == "__main__":
     for v in vertex:
         graph.addVertex(v)
 
+    # BFS
+
+    print("BFS Done.")
     graph.BFS(graph.graph[0])
     graph.printGraph()
 
@@ -50,3 +53,11 @@ if __name__ == "__main__":
 
     print("Path from vertex: ", graph.graph[0].data.index, " to vertex:", graph.graph[3].data.index, " is trough vertices:")
     graph.printPath(graph.graph[0], graph.graph[3])
+
+
+    # DFS
+    print("\n")
+
+    print("DFS done.")
+    graph.DFS()
+    graph.printGraph()
