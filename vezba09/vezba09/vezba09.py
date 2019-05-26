@@ -61,3 +61,8 @@ if __name__ == "__main__":
     print("DFS done.")
     graph.DFS()
     graph.printGraph()
+
+    # Topological sort 
+    print("\n")
+
+    graph.printTopologicalSort()

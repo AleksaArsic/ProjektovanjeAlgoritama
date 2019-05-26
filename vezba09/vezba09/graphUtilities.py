@@ -42,6 +42,7 @@ class Graph:
     def __init__(self):
         self.graph = []
         self.time = 0
+        self.topologicalSort = []
 
     def addVertex(self, vertex):
         if isinstance(vertex, Vertex) and vertex not in self.graph:
@@ -124,3 +125,10 @@ class Graph:
         vertex.color = VertexColor.BLACK
         self.time = self.time + 1
         vertex.finish = self.time
+
+        self.topologicalSort.insert(0, vertex)
+
+    def printTopologicalSort(self):
+
+        for vertex in self.topologicalSort:
+            print("index: ", vertex.data.index, ", discovered: ", vertex.time, ", finish:", vertex.finish)
