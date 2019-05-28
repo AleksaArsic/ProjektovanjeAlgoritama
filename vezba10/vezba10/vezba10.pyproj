@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="dijkstraAlgorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="graphUtilities.py">
       <SubType>Code</SubType>
     </Compile>

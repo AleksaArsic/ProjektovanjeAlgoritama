@@ -1,6 +1,7 @@
 import sys
 
 from graphUtilities import *
+from dijkstraAlgorithm import *
 
 if __name__ == "__main__":
 
@@ -47,6 +48,9 @@ if __name__ == "__main__":
     graph.addEdge(e8)
     graph.addEdge(e9)
     graph.addEdge(e10)
+
+    # Dijkstra
+    Dijkstra(graph, graph.vertices[1])
 
     # Print graph
     graph.printGraph()

@@ -9,6 +9,10 @@ class Vertex:
         self.edges = [] 
         self.data = data
 
+        # Dijkstra variables
+        self.distance = math.inf
+        self.pi = None
+
     def addEdge(self, edge = None):
 
         if isinstance(edge, Edge) and edge not in self.edges:
@@ -55,7 +59,8 @@ class Graph:
 
         for vertex in self.vertices:
 
-            print("Vertex: ", vertex.data.data)
+            print("Vertex: ", vertex.data.data, ", Dijkstra distance:", vertex.distance)
 
             for edge in vertex.edges:
                 print("\tEdge to:", edge.destination.data.data, ", weight:", edge.weight)
+                
