@@ -6,7 +6,7 @@ def Dijkstra(graph = None, start = None):
 
     if isinstance(graph, Graph) and isinstance(start, Vertex):
 
-        initializeSinlgeSource(graph, start)
+        initializeSingleSource(graph, start)
 
         s = []
         queue = graph.vertices.copy()
@@ -29,7 +29,7 @@ def Relax(u = None, v = None, weight = None):
         v.distance = u.distance + weight
         v.pi = u
 
-def initializeSinlgeSource(graph = None, start = None):
+def initializeSingleSource(graph = None, start = None):
     
     for vertex in graph.vertices:
         vertex.distance = math.inf
