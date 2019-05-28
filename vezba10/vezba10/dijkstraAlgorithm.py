@@ -36,13 +36,3 @@ def initializeSinlgeSource(graph = None, start = None):
         vertex.pi = None
 
     start.distance = 0
-
-def extractMinimum(queue = None):
-
-    min = math.inf
-    pos = math.inf
-
-    for i in range(len(queue)):
-        for j in range(len(queue.edges)):
-            if queue.edges[j].weight < min:
-                pos = j
