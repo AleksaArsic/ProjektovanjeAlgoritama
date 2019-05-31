@@ -49,6 +49,7 @@ def shortestPath(graph = None, nodeA = None, nodeB = None):
 
         shortest = []
         node = nodeB
+        distance = nodeB.distance
 
         while node.pi != None:
             shortest.append(node.pi)
@@ -59,4 +60,4 @@ def shortestPath(graph = None, nodeA = None, nodeB = None):
     
     shortest.reverse()
 
-    return shortest
+    return (shortest, distance)

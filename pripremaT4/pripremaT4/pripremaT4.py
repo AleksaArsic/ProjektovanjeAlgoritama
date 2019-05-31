@@ -12,6 +12,7 @@ def newShortestPath():
 
     shortest = []
     node = graph.vertices[len(graph.vertices) - 1]
+    distance = node.distance
 
     while node.pi != None:
         shortest.append(node.pi)
@@ -19,7 +20,7 @@ def newShortestPath():
 
     shortest.reverse()
 
-    return shortest
+    return (shortest, distance)
 
 def makeGraph():
     global graph
@@ -85,19 +86,22 @@ if __name__ == "__main__":
     dijkstraAlgorithm(graph, graph.vertices[0])
     graph.printGraph()
 
-    shortest = shortestPath(graph, graph.vertices[0], graph.vertices[len(graph.vertices) - 1])
+    shortest, d = shortestPath(graph, graph.vertices[0], graph.vertices[len(graph.vertices) - 1])
 
-    print("Shortest path from vertex a to vertex g")
+    print("Shortest path from vertex a to vertex g: ", d, "trough vertices: ")
     for v in shortest:
         print(v.d.data)
 
+    print("\n")
+    print("Edge update")
     updateEdge(graph, graph.vertices[1], graph.vertices[2], -4)
     graph.printGraph()
 
+    print("\n")
     print("Bellman-Ford Algorithm")
-    shortest = newShortestPath()
+    shortest, d = newShortestPath()
     graph.printGraph()
 
-    print("Shortest path from vertex a to vertex g")
+    print("Shortest path from vertex a to vertex g: ", d, " trough vertices: ")
     for v in shortest:
         print(v.d.data)
