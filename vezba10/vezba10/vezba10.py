@@ -1,7 +1,31 @@
 import sys
+import random
+import string
 
 from graphUtilities import *
 from dijkstraAlgorithm import *
+
+graphSize = 5
+edgesNo = 10
+
+def randomGraph():
+
+    graph = Graph()
+
+    randLetters = []
+
+    for i in range(graphSize):
+        randLetters.append(random.choice(string.ascii_lowercase))
+
+    for i in range(graphSize):
+        v = Vertex(randLetters[i])
+        graph.addVertex(v)
+
+    for i in range(edgesNo):
+        e = Edge(random.choice(graph.vertices), random.choice(graph.vertices), random.randint(0, 10))
+        graph.addEdge(e)
+
+    return graph
 
 if __name__ == "__main__":
 
@@ -54,3 +78,6 @@ if __name__ == "__main__":
 
     # Print graph
     graph.printGraph()
+
+    #g = randomGraph()
+    #g.printGraph()
