@@ -69,6 +69,7 @@ if __name__ == "__main__":
     h9 = hashData(9, 'i')
     h10 = hashData(10, 'j')
 
+    hList = hashList.copy()
 
     chainedHashInsert(hashList, h1, hashSize)
     chainedHashInsert(hashList, h2, hashSize)
@@ -93,3 +94,25 @@ if __name__ == "__main__":
     chainedHashSearch(hashList, 8, hashSize)
     chainedHashSearch(hashList, 9, hashSize)
     chainedHashSearch(hashList, 10, hashSize)
+
+    hashInsert(hList, h1, hashSize)
+    hashInsert(hList, h2, hashSize)
+    hashInsert(hList, h3, hashSize)
+    hashInsert(hList, h4, hashSize)
+    hashInsert(hList, h5, hashSize)
+    hashInsert(hList, h6, hashSize)
+    hashInsert(hList, h7, hashSize)
+    hashInsert(hList, h8, hashSize)
+    hashInsert(hList, h9, hashSize)
+    hashInsert(hList, h10, hashSize)
+
+    print(hashSearch(hashList, h1, hashSize))
+    print(hashSearch(hashList, h2, hashSize))
+    print(hashSearch(hashList, h3, hashSize))
+    print(hashSearch(hashList, h4, hashSize))
+    print(hashSearch(hashList, h5, hashSize))
+    print(hashSearch(hashList, h6, hashSize))
+    print(hashSearch(hashList, h7, hashSize))
+    print(hashSearch(hashList, h8, hashSize))
+    print(hashSearch(hashList, h9, hashSize))
+    print(hashSearch(hashList, h10, hashSize))

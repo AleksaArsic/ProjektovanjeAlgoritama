@@ -76,3 +76,35 @@ def chainedHashDelete(T, x, size):
 
 
 
+def linearProbing(k, m, i):
+    return (divisionMethod(k, m) + i) % m
+
+def hashInsert(T, k, m):
+
+    i = 0
+    j = 0
+    while i != m:
+        j = linearProbing(k.key, m, i)
+        if T[j] == None:
+            T[j] == k
+            return j
+        else:
+            i += 1
+
+    print("Error! Hash table overflow")
+
+def hashSearch(T, k, m):
+    
+    i = 0
+    j = 0
+    while i != m:
+        j = linearProbing(k.key, m, i)
+        
+        if T[j] == None:
+            break
+
+        if T[j].literal == k.literal:
+            return j
+        i += 1
+
+    return None
