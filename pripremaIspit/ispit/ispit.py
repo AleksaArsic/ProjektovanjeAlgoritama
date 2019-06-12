@@ -3,6 +3,9 @@ import sys
 from graphUtilities import *
 from dijkstraAlgorithm import *
 from bellmanFordAlgorithm import *
+from hashUtilities import *
+
+hashSize = 10
 
 if __name__ == "__main__":
 
@@ -40,3 +43,53 @@ if __name__ == "__main__":
     bellmanFordAlgortihm(graph, v1)
 
     graph.printGraph()
+
+    graph.BFS(v1)
+    print("\nPath from: ", v1.d.d, " to: ", v5.d.d)
+
+    graph.printBFSpath(v1, v5)
+
+
+    print("\nDFS and topological sort:")
+    graph.DFS()
+
+    for v in graph.topologicalSort:
+        print("Vertex: ", v.d.d, " discovered time: ", v.disc, " finish time: ", v.finish)
+
+    hashList = [None] * hashSize
+
+    h1 = hashData(1, 'a')
+    h2 = hashData(2, 'b')
+    h3 = hashData(3, 'c')
+    h4 = hashData(4, 'd')
+    h5 = hashData(2, 'e')
+    h6 = hashData(2, 'f')
+    h7 = hashData(7, 'g')
+    h8 = hashData(8, 'h')
+    h9 = hashData(9, 'i')
+    h10 = hashData(10, 'j')
+
+
+    chainedHashInsert(hashList, h1, hashSize)
+    chainedHashInsert(hashList, h2, hashSize)
+    chainedHashInsert(hashList, h3, hashSize)
+    chainedHashInsert(hashList, h4, hashSize)
+    chainedHashInsert(hashList, h5, hashSize)
+    chainedHashInsert(hashList, h6, hashSize)
+    chainedHashInsert(hashList, h7, hashSize)
+    chainedHashInsert(hashList, h8, hashSize)
+    chainedHashInsert(hashList, h9, hashSize)
+    chainedHashInsert(hashList, h10, hashSize)
+
+    chainedHashDelete(hashList, h5, hashSize)
+
+    chainedHashSearch(hashList, 1, hashSize)
+    chainedHashSearch(hashList, 2, hashSize)
+    chainedHashSearch(hashList, 3, hashSize)
+    chainedHashSearch(hashList, 4, hashSize)
+    chainedHashSearch(hashList, 5, hashSize)
+    chainedHashSearch(hashList, 6, hashSize)
+    chainedHashSearch(hashList, 7, hashSize)
+    chainedHashSearch(hashList, 8, hashSize)
+    chainedHashSearch(hashList, 9, hashSize)
+    chainedHashSearch(hashList, 10, hashSize)
