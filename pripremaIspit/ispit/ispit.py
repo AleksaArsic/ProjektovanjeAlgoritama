@@ -4,6 +4,7 @@ from graphUtilities import *
 from dijkstraAlgorithm import *
 from bellmanFordAlgorithm import *
 from hashUtilities import *
+from lCommonSubsequence import *
 
 hashSize = 10
 
@@ -116,3 +117,21 @@ if __name__ == "__main__":
     print(hashSearch(hashList, h8, hashSize))
     print(hashSearch(hashList, h9, hashSize))
     print(hashSearch(hashList, h10, hashSize))
+
+
+    stringA = "bdcaba"
+    stringB = "abcbdab"
+
+    print("Recursive lcs of", stringA, " and", stringB, " is:", LCS(stringA, len(stringA), stringB, len(stringB)))
+
+    b, c = LCSlength(stringA, stringB)
+
+    for i in range(len(stringA) + 1):
+        print(c[i])
+
+    print("\n")
+
+    for i in range(len(stringA) + 1):
+        print(b[i])
+
+    printLCS(b, stringB, len(stringB) - 1, len(stringA) - 1)
